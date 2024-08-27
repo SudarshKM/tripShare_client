@@ -7,18 +7,26 @@ import Chatwindow from "./pages/Chatwindow";
 import Profile from "./pages/Profile";
 import Aboutus from "./pages/Aboutus";
 import Authentication from "./pages/Authentication";
+import { useContext } from "react";
+import { loginContex } from "./context/DataShare";
 
 function App() {
+
+  const {isLoggedin , setIsLoggedIn} = useContext(loginContex)
+
+
+  const token = sessionStorage.getItem('token')
   return (
     <>
+    
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/home" element={<Home />} />
         <Route path="/login" element={<Authentication login />} />
         <Route path="/register" element={<Authentication register />} />{" "}
-        <Route path="/chatbox" element={<Chatwindow />} />
+        {/* <Route path="/chatbox" element={<Chatwindow />} /> */}
         <Route path="/profile" element={<Profile />} />
-        <Route path="/aboutus" element={<Aboutus />} />
+        {/* <Route path="/aboutus" element={<Aboutus />} /> */}
       </Routes>
     </>
   );

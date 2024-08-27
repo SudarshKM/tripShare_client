@@ -51,11 +51,11 @@ function UserProfile() {
       {profileDetails[0] ? (
         <div className="container shadow rounded my-4 p-3 ">
           <div className="text-center">
-            <img
+            {/* <img
               src={dp}
               alt=""
               style={{ width: "50px", borderRadius: "50%" }}
-            />
+            /> */}
 
             <h2 className="fw-bold mt-3">{profileDetails[0]?.username}</h2>
 

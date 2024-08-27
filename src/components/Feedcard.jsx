@@ -119,12 +119,12 @@ function Feedcard({trips}) {
         </Modal.Body>
         <Modal.Footer>
 
-          <div className='d-flex'>
+          {/* <div className='d-flex'>
             <h6 className='fw-bold mt-2 me-3'>Have a chat with {trips?.username} ?</h6>
             <Button variant="primary" onClick={handleClose}>
               Chat
             </Button>
-          </div>
+          </div> */}
         </Modal.Footer>
       </Modal>
     </>

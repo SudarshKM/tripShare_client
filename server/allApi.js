@@ -24,6 +24,11 @@ export const getAllHostApi=async (searchKey)=>{
     return await commonApi('GET',`${serverURl}/host?search=${searchKey}`,"")
  }
 
+ //code to get allhostdetails : no search
+export const getAllHostnosearchApi=async ()=>{
+    return await commonApi('GET',`${serverURl}/hostnosearch`,"")
+ }
+
 
 
 //add a feed

@@ -146,13 +146,13 @@ function Home() {
     <>
       <Header />
       <div className="row w-100">
-        <div className="col-md-5 p-4 d-flex justify-content-center align-items-center bg-light rounded">
+        <div id="parent-hytcard" className="col-md-5 p-4 d-flex justify-content-center align-items-center bg-light rounded">
           <div
             className="hytcard card rounded d-flex justify-content-center align-items-center"
             id="hytcard"
           >
             <div className="">
-              <h3 className="text-light">Mood for a trip?</h3>
+              <h3 className="text-light"> </h3>
               <button
                 className="btn btn-light w-100"
                 variant="primary"

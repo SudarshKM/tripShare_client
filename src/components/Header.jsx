@@ -4,14 +4,24 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPowerOff } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from '../assets/logo-Photoroom.png'
+// import { loginContex } from '../context/DataShare';
 
 
 function Header() {
+  // const {isLoggedin , setIsLoggedIn} = useContext(loginContex)
+
+  const navigate = useNavigate()
+
+  const logout=()=>{
+    sessionStorage.clear()
+    
+    navigate('/')
+  }
   return (
     <>
-    <Navbar className='' expand="lg" style={{backgroundColor:"#27192f"}}>
+    <Navbar className='' expand="lg" style={{backgroundColor:"#6482AD"}}>
       <Container>
         <Navbar.Brand className='fw-bold'>
           <Link to={'/home'} style={{textDecoration:"none",color:"white"}}><span style={{color:'white'}}>TripShare</span></Link>
@@ -21,7 +31,7 @@ function Header() {
           <Nav className="ms-auto align-items-center">
             {/* <Link to={'/aboutus'} className='me-md-5 mt-3 mt-md-0 fw-bold' style={{textDecoration:"none",color:"white"}}><>About Us</></Link> */}
             <Link to={'/profile'} className='me-md-5 mt-3 mt-md-0 fw-bold' style={{textDecoration:"none",color:"white"}}>My Profile</Link>
-            <Link to={'/'}><button className='btn btn-light fw-bold mt-3 mt-md-0'style={{textDecoration:"none"}}>Log Out</button></Link>
+            <Link to={'/'}><button className='btn btn-light fw-bold mt-3 mt-md-0'style={{textDecoration:"none"}} onClick={logout}>Log Out</button></Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import Postfeed from "../components/Postfeed";
-import { getAllHostApi, getAllPostApi } from "../../server/allApi";
+import {  getAllHostnosearchApi, getAllPostApi } from "../../server/allApi";
 import { editResponseContext } from "../context/DataShare";
 
 function Profile() {
@@ -17,8 +17,8 @@ function Profile() {
   const { editResponse, setEditResponse } = useContext(editResponseContext);
 
   const getAllHostDetails = async () => {
-    const result = await getAllHostApi();
-    /*  console.log(result); */
+    const result = await getAllHostnosearchApi();
+      console.log(result); 
     setAllHostDetails(result.data.reverse());
     // console.log(result);
   };
@@ -44,7 +44,7 @@ function Profile() {
       <Header />
       <div className="container-fluid">
         <div className="row">
-          <div className="col-md-5">
+          <div className="col-md-5 d-flex ">
             <UserProfile />
           </div>
           <div

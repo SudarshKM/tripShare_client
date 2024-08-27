@@ -6,7 +6,8 @@ import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 
 function Footer() {
   return (
-    <div div className='p-5' style={{backgroundColor:"#27192f"}}>
+    <div div className='p-5' style={{backgroundColor:"#6482AD"}}>
+      <hr />
     <div className="row">
       <div className="col-md-5 text-light">
         <h1 className=''> TripShare</h1>
