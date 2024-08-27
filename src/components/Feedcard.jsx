@@ -40,7 +40,7 @@ function Feedcard({trips}) {
     <div className='p-2 shadow card w-100 my-4' style={{backgroundColor:"white"}}>
       <div className="row w-100">
         <div className="col-md-2 d-flex align-items-center justify-content-center flex-column">
-          <img src={dp} alt="no image" style={{width:'50px',borderRadius:'50%'}}/>
+          {/* <img src={dp} alt="no image" style={{width:'50px',borderRadius:'50%'}}/> */}
           <h6 className='mt-2'>{trips?.username}</h6>
         </div>
         <div className="col-md-8 ">
