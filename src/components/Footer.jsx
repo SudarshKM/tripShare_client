@@ -9,15 +9,15 @@ function Footer() {
     <div div className='p-5' style={{backgroundColor:"#27192f"}}>
     <div className="row">
       <div className="col-md-5 text-light">
-        <h1>EXPLOREO</h1>
+        <h1 className=''> TripShare</h1>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, dolores beatae atque voluptatem eligendi molestiae quis. Ex reprehenderit voluptatem, autem, unde vitae quidem quo asperiores consequatur veritatis eligendi aut! Magnam!</p>
       </div>
 
       <div className="col-md-3 d-flex justify-content-center align-items-center flex-column text-light" >
-        <h1>link</h1>
+        {/* <h1>link</h1>
         <p>abcdef</p>
         <p>abcdef</p>
-        <p>abcdef</p>
+        <p>abcdef</p> */}
       </div>
 
       <div className="col-md-4">
