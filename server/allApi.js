@@ -1,7 +1,7 @@
 
 import {commonApi} from './commonApi';
-// const serverURl = "http://localhost:4000"
-const serverURl = 'https://tripshare-server.onrender.com'
+const serverURl = "http://localhost:4000"
+// const serverURl = 'https://tripshare-server.onrender.com'
 
 //register
 export const registerUserApi=async(reqBody)=>{

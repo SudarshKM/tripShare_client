@@ -6,16 +6,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPowerOff } from '@fortawesome/free-solid-svg-icons';
 import { Link, useNavigate } from 'react-router-dom';
 import logo from '../assets/logo-Photoroom.png'
+import { useContext } from 'react';
+import { loggedInResponseContext } from '../context/DataShare';
 // import { loginContex } from '../context/DataShare';
 
 
 function Header() {
   // const {isLoggedin , setIsLoggedIn} = useContext(loginContex)
+  const {isLoggedIn,setIsLoggedIn} = useContext(loggedInResponseContext);
+
 
   const navigate = useNavigate()
 
   const logout=()=>{
     sessionStorage.clear()
+    setIsLoggedIn(false)
     
     navigate('/')
   }

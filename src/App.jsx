@@ -8,11 +8,12 @@ import Profile from "./pages/Profile";
 import Aboutus from "./pages/Aboutus";
 import Authentication from "./pages/Authentication";
 import { useContext } from "react";
-import { loginContex } from "./context/DataShare";
+// import { loginContex } from "./context/DataShare";
+import ProtectedRoutes from "./privateRoute/ProtectedRoute";
 
 function App() {
 
-  const {isLoggedin , setIsLoggedIn} = useContext(loginContex)
+  // const {isLoggedin , setIsLoggedIn} = useContext(loginContex)
 
 
   const token = sessionStorage.getItem('token')
@@ -21,11 +22,18 @@ function App() {
     
       <Routes>
         <Route path="/" element={<Landing />} />
+ 
+        <Route element={<ProtectedRoutes/>}> 
         <Route path="/home" element={<Home />} />
+        <Route path="/profile" element={<Profile />} />
+
+        </Route>
+
+
+
         <Route path="/login" element={<Authentication login />} />
         <Route path="/register" element={<Authentication register />} />{" "}
         {/* <Route path="/chatbox" element={<Chatwindow />} /> */}
-        <Route path="/profile" element={<Profile />} />
         {/* <Route path="/aboutus" element={<Aboutus />} /> */}
       </Routes>
     </>

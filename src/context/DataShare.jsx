@@ -1,20 +1,20 @@
 import React, { createContext, useState } from "react";
 
 export const editResponseContext = createContext()
-export const loginContex= createContext()
+export const loggedInResponseContext= createContext()
 
 function DataShare({ children }) {
   const [ editResponse , setEditResponse] = useState(false);
-  const [isLoggedin , setIsLoggedIn] = useState(false)
+  const [isLoggedIn , setIsLoggedIn] = useState(false)
 
 
   return (
     //to access value of the context 
      <editResponseContext.Provider value={{editResponse , setEditResponse }} >
-      <loginContex.Provider value={{isLoggedin , setIsLoggedIn}}>
+      <loggedInResponseContext.Provider value={{isLoggedIn , setIsLoggedIn}}>
       {children}
 
-      </loginContex.Provider>
+      </loggedInResponseContext.Provider>
        </editResponseContext.Provider>
   );
 }
