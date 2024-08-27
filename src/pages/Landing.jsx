@@ -8,7 +8,8 @@ function Landing() {
     <>
     <div className='p-5  align-items-center justify-content-center d-flex flex-column' style={{backgroundColor:"#77ACF1", height:'100vh'}}>
       <h1 className='text-light mt-md-5' style={{fontSize:'50px'}}>TripShare</h1>
-      <p className='text-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, ipsum deserunt veritatis reprehenderit, repellat fugiat quo ipsa, non nulla asperiores quis. Iure aliquid laborum nobis illum quibusdam nostrum nam minus?</p>
+      <p className='text-light'>Sharing journeys so that more than one person can travel together which prevents the need for others to
+      drive to a location and allows shared expenses by finding your Companion</p>
       <Link to={'./login'}><button className='btn btn-primary'>start</button></Link>
     </div>
     <div> 
