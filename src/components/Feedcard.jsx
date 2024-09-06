@@ -115,6 +115,8 @@ function Feedcard({trips}) {
 
           <hr />
           <h3 className='text-center text-danger'>Celebrate our Journey</h3>
+
+          <h5 className='text-center'>Contact :{userName} ?</h5>
           
         </Modal.Body>
         <Modal.Footer>
